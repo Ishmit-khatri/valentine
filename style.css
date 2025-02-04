@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    font-family: 'Dancing Script', cursive;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    animation: bounce 1.5s infinite;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.5);
+}
+
+#yesBtn:hover {
+    transform: scale(1.1) rotate(-3deg);
+    background-color: #e63950;
+}
+
+#noBtn {
+    background-color: grey;
+    color: white;
+    position: relative;
+}
+
+#noBtn:hover {
+    transform: scale(0.9);
+}
+
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 4s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hidden {
+    display: none;
+}
